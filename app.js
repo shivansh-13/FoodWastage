@@ -46,3 +46,53 @@ const darkModeToggle = document.getElementById('darkModeToggle');
 darkModeToggle.addEventListener('change', () => {
   document.body.classList.toggle('dark-mode');
 });
+// Add this section right before the "Create charts for Mess 1 and Mess 2" comment
+function createPieChart(elementId, data, backgroundColor) {
+    const ctx = document.getElementById(elementId).getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Mess 1', 'Mess 2'],
+        datasets: [{
+          data,
+          backgroundColor
+        }]
+      },
+    });
+  }
+  
+  const peoplePercentageData = [64.9, 100 - 64.9];
+  const pieChartBackgroundColor = ['rgba(75, 192, 192, 0.8)', 'rgba(255, 99, 132, 0.8)'];
+  
+  // Create pie chart for people percentage in messes
+  createPieChart('peoplePercentageChart', peoplePercentageData, pieChartBackgroundColor);
+  // Modify the createPieChart function
+function createPieChart(elementId, data, backgroundColor, title) {
+    const ctx = document.getElementById(elementId).getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Yes', 'No'],
+        datasets: [{
+          data,
+          backgroundColor
+        }]
+      },
+      options: {
+        plugins: {
+          title: {
+            display: true,
+            text: title
+          }
+        }
+      }
+    });
+  }
+// Add this section right before the "Create pie chart for people percentage in messes" comment
+const foodWastageBoardData = [80, 100 - 80];
+const foodWastageBoardBackgroundColor = ['rgba(75, 192, 192, 0.8)', 'rgba(255, 99, 132, 0.8)'];
+const foodWastageBoardTitle = 'Percentage of people who saw the food wastage board';
+
+// Create pie chart for food wastage board awareness
+createPieChart('foodWastageBoardChart', foodWastageBoardData, foodWastageBoardBackgroundColor, foodWastageBoardTitle);
+  
