@@ -158,3 +158,33 @@ canvas {
 .insights p {
   margin: 10px 0;
 }
+/* Add this section at the end of the file */
+.references {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.references h2 {
+  margin: 0 0 10px;
+}
+
+.references ol {
+  padding-left: 20px;
+}
+
+.references li {
+  margin-bottom: 10px;
+}
+
+.references a {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.references a:hover {
+  text-decoration: underline;
+}
