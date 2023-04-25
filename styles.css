@@ -122,4 +122,21 @@ canvas {
     background-color: #ffa726;
     color: #333;
   }
-  
+  /* Add this section at the end of the file */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .chart-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Make canvas responsive */
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+}
